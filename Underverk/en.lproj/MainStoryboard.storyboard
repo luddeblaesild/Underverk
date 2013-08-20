@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ZU4-zO-9Qg">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Init View Controller-->
+        <scene sceneID="KiC-fY-aGI">
+            <objects>
+                <viewController id="ZU4-zO-9Qg" customClass="InitViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Oj-qS-zB7">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KhM-fd-Raz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-813" y="431"/>
+        </scene>
+        <!--Pregnancy View Controller - Min graviditet-->
+        <scene sceneID="4eQ-79-A84">
+            <objects>
+                <viewController storyboardIdentifier="" id="S7L-6T-bam" customClass="PregnancyViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yLF-QL-kvE">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WY4-rW-0Ks">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Fotodagbok">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="nWs-ib-eH2" kind="push" id="amP-gp-bXh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WY4-rW-0Ks" firstAttribute="top" secondItem="yLF-QL-kvE" secondAttribute="top" constant="78" id="16n-o4-Ypl"/>
+                            <constraint firstItem="WY4-rW-0Ks" firstAttribute="centerX" secondItem="yLF-QL-kvE" secondAttribute="centerX" type="default" id="83K-O0-7r8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Min graviditet" id="veu-2X-PoH">
+                        <barButtonItem key="backBarButtonItem" title="Tillbaka" id="j6N-UJ-o1G"/>
+                        <barButtonItem key="leftBarButtonItem" title="Meny" id="cxo-bG-eGV">
+                            <connections>
+                                <action selector="revealMenuBtnPressed:" destination="S7L-6T-bam" id="sfg-LS-UAx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AJk-ZL-c6L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="407" y="169"/>
+        </scene>
+        <!--Calculate View Controller-->
+        <scene sceneID="xUu-Ox-88N">
+            <objects>
+                <viewController storyboardIdentifier="Calculate" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sGQ-Kt-Utz" customClass="CalculateViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5cw-4N-7Mi">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e99-L8-vgL">
+                                <items>
+                                    <navigationItem title="Beräkna" id="mMR-Tz-VUk">
+                                        <barButtonItem key="rightBarButtonItem" title="Stäng" id="jS3-E7-jgo">
+                                            <connections>
+                                                <action selector="closeCalculateBtn:" destination="sGQ-Kt-Utz" id="yRM-RI-fwF"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="e99-L8-vgL" firstAttribute="top" secondItem="5cw-4N-7Mi" secondAttribute="top" type="default" id="3vY-mx-g72"/>
+                            <constraint firstItem="e99-L8-vgL" firstAttribute="trailing" secondItem="5cw-4N-7Mi" secondAttribute="trailing" type="default" id="Rme-aX-Gz9"/>
+                            <constraint firstItem="e99-L8-vgL" firstAttribute="leading" secondItem="5cw-4N-7Mi" secondAttribute="leading" type="default" id="ceK-t0-hnA"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rM1-fI-IeW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="787" y="169"/>
+        </scene>
+        <!--Photo Diary View Controller - Fotodagbok-->
+        <scene sceneID="9Cx-YU-fpQ">
+            <objects>
+                <viewController storyboardIdentifier="PhotoDiary" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nWs-ib-eH2" customClass="PhotoDiaryViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="80b-Q0-cfi">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Fotodagbok" id="2uQ-Hc-AKE">
+                        <barButtonItem key="backBarButtonItem" title="Tillbaka" id="gXe-bX-DtG"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wH1-nv-qL9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1192" y="169"/>
+        </scene>
+        <!--Bookings View Controller - Mina bokningar-->
+        <scene sceneID="rCE-NN-eFC">
+            <objects>
+                <viewController storyboardIdentifier="" id="bGb-n6-d08" customClass="BookingsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9DF-Um-lMB">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Mina bokningar" id="gno-6W-rsJ">
+                        <barButtonItem key="backBarButtonItem" title="Tillbaka" id="5NE-6x-TEJ"/>
+                        <barButtonItem key="leftBarButtonItem" title="Meny" id="cYn-Hc-gA5">
+                            <connections>
+                                <action selector="revealMenuBtnPressed:" destination="bGb-n6-d08" id="VnM-Wg-SsS"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Lägg till" id="naH-pJ-awC">
+                            <connections>
+                                <segue destination="YJ4-p7-3Qd" kind="modal" id="W7e-mS-VaZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8NC-L9-MCb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="407" y="849"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="bzy-Ve-lcy">
+            <objects>
+                <tableViewController storyboardIdentifier="Menu" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yLu-Yf-Xql" customClass="MenuViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="4bB-JZ-N3u">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MenuCell" id="WCD-dG-Ejv">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="yLu-Yf-Xql" id="BCC-Gd-Vkl"/>
+                            <outlet property="delegate" destination="yLu-Yf-Xql" id="zwa-dr-2tj"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3lE-lC-VpX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-421" y="431"/>
+        </scene>
+        <!--Contact View Controller - Kontakt-->
+        <scene sceneID="XCr-1j-Ymh">
+            <objects>
+                <viewController storyboardIdentifier="" id="RvW-72-dp4" customClass="ContactViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kt9-Oy-t9J">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Kontakt" id="KOv-cD-yIh">
+                        <barButtonItem key="leftBarButtonItem" title="Meny" id="u9G-iL-PNy">
+                            <connections>
+                                <action selector="revealMenuBtnPressed:" destination="RvW-72-dp4" id="XM0-Ph-XjG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6fA-E8-JMF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="407" y="1529"/>
+        </scene>
+        <!--News View Controller - Title-->
+        <scene sceneID="hhM-LL-CBz">
+            <objects>
+                <viewController storyboardIdentifier="News" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JpG-lW-7j8" customClass="NewsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="enS-Ky-tiK">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="lZY-EP-c72">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NewsCell" id="YfE-VP-IdE" customClass="CustomNewsCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="News Header" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdk-zn-zc8">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="bdk-zn-zc8" firstAttribute="leading" secondItem="YfE-VP-IdE" secondAttribute="leading" constant="20" type="default" id="5VE-TT-EfN"/>
+                                            <constraint firstItem="bdk-zn-zc8" firstAttribute="top" secondItem="YfE-VP-IdE" secondAttribute="top" constant="11" id="KbT-ff-Wpi"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="newsHeaderLabel" destination="bdk-zn-zc8" id="nWs-Up-oDf"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="JpG-lW-7j8" id="psh-9Q-zl8"/>
+                                    <outlet property="delegate" destination="JpG-lW-7j8" id="GPr-NP-8sJ"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lby-DZ-JhN">
+                                <items>
+                                    <navigationItem title="Nyheter" id="aFB-78-bln">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="mKl-fM-2KC">
+                                            <connections>
+                                                <action selector="refreshNewsPressed:" destination="JpG-lW-7j8" id="6hX-A8-inT"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Stäng" id="TOq-4l-rOF">
+                                            <connections>
+                                                <action selector="closeNewsBtn:" destination="JpG-lW-7j8" id="5u5-iB-Zr7"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Lby-DZ-JhN" firstAttribute="top" secondItem="enS-Ky-tiK" secondAttribute="top" type="default" id="Nkh-Ow-nrl"/>
+                            <constraint firstItem="Lby-DZ-JhN" firstAttribute="bottom" secondItem="lZY-EP-c72" secondAttribute="top" type="default" id="XVY-6T-V4S"/>
+                            <constraint firstItem="lZY-EP-c72" firstAttribute="trailing" secondItem="enS-Ky-tiK" secondAttribute="trailing" type="default" id="bn1-qD-yWZ"/>
+                            <constraint firstItem="Lby-DZ-JhN" firstAttribute="leading" secondItem="enS-Ky-tiK" secondAttribute="leading" type="default" id="ifD-4O-HM0"/>
+                            <constraint firstItem="Lby-DZ-JhN" firstAttribute="trailing" secondItem="enS-Ky-tiK" secondAttribute="trailing" type="default" id="neF-K7-Aes"/>
+                            <constraint firstItem="lZY-EP-c72" firstAttribute="leading" secondItem="enS-Ky-tiK" secondAttribute="leading" type="default" id="s1v-7E-SfM"/>
+                            <constraint firstItem="lZY-EP-c72" firstAttribute="bottom" secondItem="enS-Ky-tiK" secondAttribute="bottom" type="default" id="vcZ-Ii-6VI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="HxH-em-pPN"/>
+                    <connections>
+                        <outlet property="newsNavBar" destination="Lby-DZ-JhN" id="a6p-w3-Ome"/>
+                        <outlet property="newsTableView" destination="lZY-EP-c72" id="SVa-bD-Exc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0OY-s3-DVG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="787" y="-505"/>
+        </scene>
+        <!--Info View Controller - Underverk-->
+        <scene sceneID="jX0-Xb-Wbk">
+            <objects>
+                <viewController storyboardIdentifier="" id="P6t-g2-9db" customClass="InfoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pvj-UC-e1W">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Underverk" id="ug7-2d-MCK">
+                        <barButtonItem key="leftBarButtonItem" title="Meny" id="4K7-z2-9RP">
+                            <connections>
+                                <action selector="revealMenuBtnPressed:" destination="P6t-g2-9db" id="rbk-el-MFu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="revealMenuBtn" destination="4K7-z2-9RP" id="fyj-kh-Ub2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uBT-kX-vwe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="407" y="-505"/>
+        </scene>
+        <!--Navigation Top View Controller-->
+        <scene sceneID="l7I-2Z-hiw">
+            <objects>
+                <navigationController storyboardIdentifier="Information" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sQv-Gq-O0z" customClass="NavigationTopViewController" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uXx-go-NCb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="P6t-g2-9db" kind="relationship" relationship="rootViewController" id="6Bg-DL-dFw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JcP-F7-GJ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-19" y="-505"/>
+        </scene>
+        <!--Navigation Top View Controller-->
+        <scene sceneID="YKV-5F-Zc5">
+            <objects>
+                <navigationController storyboardIdentifier="Min gravidetet" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tS6-D4-aBO" customClass="NavigationTopViewController" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qdB-fs-H0u">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="S7L-6T-bam" kind="relationship" relationship="rootViewController" id="ZMV-xQ-3e0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aaH-rB-toU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-19" y="169"/>
+        </scene>
+        <!--Navigation Top View Controller-->
+        <scene sceneID="Nji-Ey-VlJ">
+            <objects>
+                <navigationController storyboardIdentifier="Mina Bokningar" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aA1-rb-C35" customClass="NavigationTopViewController" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yuj-Pb-oZa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bGb-n6-d08" kind="relationship" relationship="rootViewController" id="oGa-jf-9PD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9xt-AL-ksW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-19" y="849"/>
+        </scene>
+        <!--Navigation Top View Controller-->
+        <scene sceneID="hhp-Xs-l45">
+            <objects>
+                <navigationController storyboardIdentifier="Kontakt" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Zk6-YT-m1W" customClass="NavigationTopViewController" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KoL-K0-CfX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RvW-72-dp4" kind="relationship" relationship="rootViewController" id="ekG-58-OYG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m5b-3a-b5R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-19" y="1529"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8jz-6M-oSi">
+            <objects>
+                <navigationController id="YJ4-p7-3Qd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kNz-AB-1Ve">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Oxq-8Q-4bn" kind="relationship" relationship="rootViewController" id="yc5-g4-cfV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y5J-gL-h1U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="810" y="849"/>
+        </scene>
+        <!--My Bookings View Controller - Mina bokningar-->
+        <scene sceneID="hO3-pl-DI4">
+            <objects>
+                <viewController storyboardIdentifier="MyBookings" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Oxq-8Q-4bn" customClass="MyBookingsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="feP-wz-vUy">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Mina bokningar" id="t4C-uD-I6V">
+                        <barButtonItem key="backBarButtonItem" title="Tillbaka" id="jFL-56-vxQ"/>
+                        <barButtonItem key="leftBarButtonItem" title="Stäng" id="DNP-NW-wik">
+                            <connections>
+                                <action selector="closeMyBookingsBtn:" destination="Oxq-8Q-4bn" id="aHM-uj-Sc0"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="sOi-f7-CyK"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ssX-Yq-uRp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1192" y="849"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="BookingsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BookingsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="revealMenuBtnPressed:"/>
+            </relationships>
+        </class>
+        <class className="CalculateViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CalculateViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="closeCalculateBtn:"/>
+            </relationships>
+        </class>
+        <class className="ContactViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ContactViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="revealMenuBtnPressed:"/>
+            </relationships>
+        </class>
+        <class className="CustomNewsCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomNewsCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="newsHeaderLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="ECSlidingViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ECSlidingViewController.h"/>
+        </class>
+        <class className="InfoViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/InfoViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="revealMenuBtnPressed:"/>
+                <relationship kind="outlet" name="revealMenuBtn" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="InitViewController" superclassName="ECSlidingViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/InitViewController.h"/>
+        </class>
+        <class className="MenuViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuViewController.h"/>
+        </class>
+        <class className="MyBookingsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyBookingsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="closeMyBookingsBtn:"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="NavigationTopViewController" superclassName="UINavigationController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NavigationTopViewController.h"/>
+        </class>
+        <class className="NewsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NewsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="closeNewsBtn:"/>
+                <relationship kind="action" name="refreshNewsPressed:"/>
+                <relationship kind="outlet" name="newsNavBar" candidateClass="UINavigationBar"/>
+                <relationship kind="outlet" name="newsTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="PhotoDiaryViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PhotoDiaryViewController.h"/>
+        </class>
+        <class className="PregnancyViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PregnancyViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="revealMenuBtnPressed:"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
