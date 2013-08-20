@@ -13,6 +13,8 @@
 		8B4AE1E117BCCAE50090197F /* CalculateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4AE1E017BCCAE50090197F /* CalculateViewController.m */; };
 		8B4AE1E717BCCE630090197F /* MyBookingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4AE1E617BCCE630090197F /* MyBookingsViewController.m */; };
 		8B596C2B17BBFB0C00BAF822 /* NavigationTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B596C2A17BBFB0C00BAF822 /* NavigationTopViewController.m */; };
+		8BC00C7517C36BE8005758C1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC00C7417C36BE8005758C1 /* SystemConfiguration.framework */; };
+		8BC00C7B17C36F10005758C1 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC00C7A17C36F10005758C1 /* Reachability.m */; };
 		8BC6571117BD02420066A7F6 /* btnCheck.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC6570B17BD02420066A7F6 /* btnCheck.png */; };
 		8BC6571217BD02420066A7F6 /* btnCheck@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC6570C17BD02420066A7F6 /* btnCheck@2x.png */; };
 		8BC6571317BD02420066A7F6 /* HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC6570E17BD02420066A7F6 /* HUD.m */; };
@@ -63,6 +65,9 @@
 		8B4AE1E617BCCE630090197F /* MyBookingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyBookingsViewController.m; sourceTree = "<group>"; };
 		8B596C2917BBFB0C00BAF822 /* NavigationTopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationTopViewController.h; sourceTree = "<group>"; };
 		8B596C2A17BBFB0C00BAF822 /* NavigationTopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationTopViewController.m; sourceTree = "<group>"; };
+		8BC00C7417C36BE8005758C1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		8BC00C7917C36F10005758C1 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		8BC00C7A17C36F10005758C1 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		8BC6570B17BD02420066A7F6 /* btnCheck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnCheck.png; sourceTree = "<group>"; };
 		8BC6570C17BD02420066A7F6 /* btnCheck@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btnCheck@2x.png"; sourceTree = "<group>"; };
 		8BC6570D17BD02420066A7F6 /* HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUD.h; sourceTree = "<group>"; };
@@ -135,6 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BC00C7517C36BE8005758C1 /* SystemConfiguration.framework in Frameworks */,
 				8BCE1FA717BA547E00FF63AD /* UIKit.framework in Frameworks */,
 				8BCE1FA917BA547E00FF63AD /* Foundation.framework in Frameworks */,
 				8BCE1FAB17BA547E00FF63AD /* CoreGraphics.framework in Frameworks */,
@@ -197,6 +203,15 @@
 				8BCE1FE417BBBBB800FF63AD /* ContactViewController.m */,
 			);
 			name = Contact;
+			sourceTree = "<group>";
+		};
+		8BC00C6E17C36B2E005758C1 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8BC00C7917C36F10005758C1 /* Reachability.h */,
+				8BC00C7A17C36F10005758C1 /* Reachability.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 		8BC6570A17BD02420066A7F6 /* HUD */ = {
@@ -305,6 +320,7 @@
 		8BCE1FA517BA547E00FF63AD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8BC00C7417C36BE8005758C1 /* SystemConfiguration.framework */,
 				8BCE1FA617BA547E00FF63AD /* UIKit.framework */,
 				8BCE1FA817BA547E00FF63AD /* Foundation.framework */,
 				8BCE1FAA17BA547E00FF63AD /* CoreGraphics.framework */,
@@ -318,6 +334,7 @@
 				8BCE1FBE17BA547E00FF63AD /* MainStoryboard.storyboard */,
 				8BCE1FCC17BA565500FF63AD /* Libraries */,
 				8BCE1FCB17BA564900FF63AD /* Images */,
+				8BC00C6E17C36B2E005758C1 /* Classes */,
 				8BCE1FCA17BA563E00FF63AD /* View Controllers */,
 				8BCE1FC917BA563800FF63AD /* Delegates */,
 				8BCE1FAD17BA547E00FF63AD /* Supporting Files */,
@@ -494,6 +511,7 @@
 				8BC6574E17BD15940066A7F6 /* NewsModel.m in Sources */,
 				8BC6575117BD15B90066A7F6 /* NewsContentsModel.m in Sources */,
 				8BC6575417BD15F00066A7F6 /* NewsFeed.m in Sources */,
+				8BC00C7B17C36F10005758C1 /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

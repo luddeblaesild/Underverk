@@ -11,6 +11,7 @@
 #import "NewsFeed.h"
 #import "HUD.h"
 #import "CustomNewsCell.h"
+#import "Reachability.h"
 
 @interface NewsViewController (){
     NewsFeed* _feed;
@@ -36,6 +37,31 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    // Check for internet connection
+    Reachability *networkReachability = [Reachability reachabilityForInternetConnection];
+    NetworkStatus networkStatus = [networkReachability currentReachabilityStatus];
+    if (networkStatus == NotReachable) {
+        
+        [self noConnetcionAlert];
+        
+    } else {
+        
+        NSLog(@"There IS internet connection");
+
+    }
+}
+
+// No internet connetcion alert
+- (void)noConnetcionAlert
+{
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle: @"Ett fel har inträffat!"
+                                                   message: @"Ingen nätverksanslutning hittades."
+                                                  delegate: self
+                                         cancelButtonTitle:@"Stäng"
+                                         otherButtonTitles:nil];
+    
+    [alert show];
 }
 
 - (void)didReceiveMemoryWarning
@@ -120,17 +146,28 @@
 
 - (IBAction)refreshNewsPressed:(id)sender
 {
-    // Show loader view
-    [HUD showUIBlockingIndicatorWithText:@"Laddar nyheter"];
-    
-    //fetch the feed
-    _feed = [[NewsFeed alloc] initFromURLWithString:@"http://www.nebulon.se/json/underverk/underverk_news.json"
-                                         completion:^(JSONModel *model, JSONModelError *err) {
-                                             //hide the loader view
-                                             [HUD hideUIBlockingIndicator];
-                                             
-                                             //reload the table view
-                                             [self.newsTableView reloadData];
-                                         }];
+    // Check for internet connection
+    Reachability *networkReachability = [Reachability reachabilityForInternetConnection];
+    NetworkStatus networkStatus = [networkReachability currentReachabilityStatus];
+    if (networkStatus == NotReachable) {
+        
+        [self noConnetcionAlert];
+        
+    } else {
+        
+        // Show loader view
+        [HUD showUIBlockingIndicatorWithText:@"Laddar nyheter"];
+        
+        //fetch the feed
+        _feed = [[NewsFeed alloc] initFromURLWithString:@"http://www.nebulon.se/json/underverk/underverk_news.json"
+                                             completion:^(JSONModel *model, JSONModelError *err) {
+                                                 //hide the loader view
+                                                 [HUD hideUIBlockingIndicator];
+                                                 
+                                                 //reload the table view
+                                                 [self.newsTableView reloadData];
+                                             }];
+        
+    }
 }
 @end
